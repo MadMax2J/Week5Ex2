@@ -124,8 +124,8 @@ void displayDataToUser(int frequencyDistributionDataArray[5], float sourceDataAr
     int sampleCount = 0;    //Should be 1440 for this exercise, But could be different if this function was processing other arrays.
 
     //Output data to the user...
-    puts("\nHistogram showing Distribution of wind speeds on 22nd September 2013");
-    puts("           each '*' represents up to 10 measurements\n\n");
+    puts("\nHistogram showing Distribution of wind speeds on 22nd September 2013\n");
+    //puts("           each '*' represents up to 10 measurements\n\n");
     printf("Minimum recorded wind speed was: %6.3f m/s.\n", min);
     printf("Maximum recorded wind speed was: %6.3f m/s.\n\n", max);
     printf("%9s%12s\n", "% of MAX", "Frequency");
@@ -148,5 +148,6 @@ void displayDataToUser(int frequencyDistributionDataArray[5], float sourceDataAr
     printf("%4s%5d%5d%5d%5d%5d%5d%5d%5d%5d%5d\n",  "", 5, 1, 1, 2, 2, 3, 3, 4, 4, 5);
     printf("%22s%5d%5d%5d%5d%5d%5d%5d%5d%5d%5d\n", "", 0, 0, 5, 0, 5, 0, 5, 0, 5, 0);
     printf("%27s%5d%5d%5d%5d%5d%5d%5d%5d%5d\n",    "",    0, 0, 0, 0, 0, 0, 0, 0, 0);
+    printf("%76s", "Frequency - each '*' represents up to 10 measurements\n\n");
 
 }//End of function displayDataToUser
