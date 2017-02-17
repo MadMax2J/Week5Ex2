@@ -84,13 +84,15 @@ void categorizeData(float sourceDataArray[],
     //float min = sourceDataArray[0];   //The min value is the first item in my sorted list.
     float max = sourceDataArray[sourceArraySize - 1]; //The max value is the last value. 1440 data items, numbered 0 -> 1439.
 
-    //**** NOTE **** - If my data wasn't sorted, comment-out the line above and un-comment the line below...
-    //float max = 0.0;  //A variable to hold the max value identified when iterating through the array.
-
+    //**** NOTE **** - If my data wasn't sorted, comment-out the line above and un-comment the block of code below...
+    /*float max = 0.0;  //A variable to hold the max value identified when iterating through the array.
     for(size_t index = 0; index < sourceArraySize; index++){
-        //**** NOTE **** - If my data wasn't sorted, un-comment the line below...
-        //if(sourceDataArray[index] > max) max = sourceDataArray[index];    //If the value is greater than 'max', update 'max'.
+        if(sourceDataArray[index] > max) max = sourceDataArray[index];    //If the value is greater than 'max', update 'max'.
+    }//End of for
+    */
 
+    //Categorize data into the 5 buckets...
+    for(size_t index = 0; index < sourceArraySize; index++){
         if (sourceDataArray[index] > max * 0.8){        //If the value is within 80% of the 'max' value...
             frequencyDistributionArray[4]++;
         }else if(sourceDataArray[index] > max * 0.6){   //If the value is within 60% and 80% of the 'max' value...
